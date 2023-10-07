@@ -23,6 +23,14 @@ public class Entrega {
         return "Entrega [valor=" + valor + ", distancia=" + distancia + "]";
     }
 
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public Integer getDistancia() {
+        return distancia;
+    }
+
     
 
 

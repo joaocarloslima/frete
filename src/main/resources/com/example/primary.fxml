@@ -16,7 +16,7 @@
       <TextField fx:id="txtValor" promptText="valor" />
       <TextField fx:id="txtDistancia" promptText="distância" />
       <Button fx:id="primaryButton" onAction="#calcular" text="calcular" />
-      <Label text="R$ 0,00">
+      <Label text="R$ 0,00" fx:id="lblResultado">
          <font>
             <Font size="17.0" />
          </font>
