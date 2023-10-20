@@ -2,9 +2,24 @@ package com.example;
 
 import java.math.BigDecimal;
 
-public interface Frete {
+public abstract class Frete {
+    
+    protected Entrega entrega;
 
-    public BigDecimal calcular();
-    public Frete ou(Frete frete);
+    public Frete(Entrega entrega) {
+        this.entrega = entrega;
+    }
+
+    public abstract BigDecimal calcular();
+
+    public final Frete ou(Frete proximo){
+        if (aplicarFrete())
+            return this;
+        return proximo;
+    }
+
+    public abstract boolean aplicarFrete();
+
+
     
 }

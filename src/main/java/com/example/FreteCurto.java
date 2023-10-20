@@ -2,12 +2,10 @@ package com.example;
 
 import java.math.BigDecimal;
 
-public class FreteCurto implements Frete {
-
-    private Entrega entrega;
+public class FreteCurto extends Frete {
 
     public FreteCurto(Entrega entrega) {
-        this.entrega = entrega;
+        super(entrega);
     }
 
     @Override
@@ -16,12 +14,8 @@ public class FreteCurto implements Frete {
     }
     
     @Override
-    public Frete ou(Frete proximo) {
-        if (entrega.getDistancia() <= 100) 
-            return this;
-
-        return proximo;
-        
+    public boolean aplicarFrete() {
+        return entrega.getDistancia() <= 100;
     }
     
 }
